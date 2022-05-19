@@ -1,15 +1,10 @@
 package reverse_string
 
-import "fmt"
-
 func ReverseString(input string) (output string) {
-	var temp []rune
+	var r []rune
 	letters:= []rune(input)
-	fmt.Println(letters)
 	for i,_:= range letters{
-		temp= append(temp, (letters[len(letters)-i-1]))
+		r= append(r, (letters[len(letters)-i-1]))
 	}
-	output= string(temp)
-
-	return output
+	return string(r)
 }
